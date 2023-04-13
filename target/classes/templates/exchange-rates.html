@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Exchange Rates</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Currency</th>
+        <th>Code</th>
+        <th>Mid</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="rate : ${exchangeRates}">
+        <td th:text="${rate.get('currency')}"></td>
+        <td th:text="${rate.get('code')}"></td>
+        <td th:text="${rate.get('mid')}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
